@@ -9,3 +9,7 @@ Siga os passos abaixo para carregar a extensão em ambiente de desenvolvimento:
 5. **Selecione o projeto:** Escolha a pasta principal do projeto (onde está o arquivo `manifest.json`) e clique em **Selecionar**.
 
 Pronto! A extensão já está ativa e pronta para testes. 
+
+**ATENÇÃO!**
+Utilizem sempre a versão mais atualizada do arquivo. 
+Atualmente a versão é: lily-guardian-extension-flat (2)
