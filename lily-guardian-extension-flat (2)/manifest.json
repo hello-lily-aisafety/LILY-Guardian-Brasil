@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "LILY Guardian",
+  "version": "0.1.0",
+  "description": "AI safety auditing and digital evidence preservation for protecting minorities and digital rights.",
+  "default_locale": "pt_BR",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+L"
+      },
+      "description": "Abrir o popup do LILY Guardian"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "LILY Guardian",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

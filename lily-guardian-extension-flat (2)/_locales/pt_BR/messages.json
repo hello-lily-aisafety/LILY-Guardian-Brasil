@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "LILY Guardian",
+    "description": "Extension name"
+  },
+  "appDescription": {
+    "message": "Auditoria de segurança de IA e preservação de prova digital para proteção de minorias e direitos digitais.",
+    "description": "Extension description"
+  }
+}

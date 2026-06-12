@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LILY Guardian</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">🛡️</span>
+        <div>
+          <h1>LILY Guardian</h1>
+          <p class="tagline">AI Safety &middot; Direitos Digitais</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab active" id="tab-audit" role="tab" aria-controls="panel-audit" aria-selected="true">
+        Auditoria
+      </button>
+      <button class="tab" id="tab-evidence" role="tab" aria-controls="panel-evidence" aria-selected="false">
+        Prova Digital
+      </button>
+    </nav>
+
+    <!-- Module 1: Auditing / Red-Teaming -->
+    <section class="panel active" id="panel-audit" role="tabpanel" aria-labelledby="tab-audit">
+      <label class="field-label" for="audit-input">Cole o texto para análise</label>
+      <textarea
+        id="audit-input"
+        rows="6"
+        placeholder="Cole aqui a mensagem, comentário ou conteúdo que deseja auditar..."
+      ></textarea>
+      <button class="secondary" id="selection-btn">Analisar seleção da página</button>
+      <button class="primary" id="analyze-btn">Analisar Texto</button>
+
+      <div id="audit-result" class="result" hidden aria-live="polite"></div>
+    </section>
+
+    <!-- Module 2: Digital Evidence Preservation -->
+    <section class="panel" id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence" hidden>
+      <p class="field-label">Capture uma prova da aba ativa</p>
+
+      <div class="notice" role="note">
+        <strong>Aviso de privacidade.</strong> Ao clicar em
+        <em>Registrar Evidência</em>, serão capturados e salvos localmente:
+        o <strong>screenshot</strong> da aba ativa, a <strong>URL</strong>, o
+        <strong>timestamp (UTC)</strong> e o seu <strong>IP</strong>. Um hash
+        SHA-256 é gerado para garantir a integridade. Nenhum dado é enviado a
+        servidores externos.
+      </div>
+
+      <button class="primary" id="evidence-btn">Registrar Evidência</button>
+
+      <div id="evidence-result" class="result" hidden aria-live="polite"></div>
+
+      <div class="history">
+        <div class="history-head">
+          <span class="field-label">Histórico de evidências</span>
+          <button class="link-btn" id="clear-history-btn">Limpar</button>
+        </div>
+        <div id="evidence-history" class="history-list"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span id="backend-status" class="status-dot" title="Status do backend">●</span>
+      <span class="footer-text">MVP &middot; uso responsável</span>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
