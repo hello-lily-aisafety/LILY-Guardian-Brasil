@@ -12,4 +12,5 @@ Pronto! A extensão já está ativa e pronta para testes.
 
 **ATENÇÃO!**
 Utilizem sempre a versão mais atualizada do arquivo. 
-Atualmente a versão é: lily-guardian-extension-flat (6)
+Atualmente a versão é: lily-guardian-extension-flat (7)
+(Projeto criado utilizando - Gemini e Devin AI + Supervisão humana)
