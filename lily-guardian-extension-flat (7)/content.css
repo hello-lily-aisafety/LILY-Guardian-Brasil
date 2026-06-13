@@ -1,0 +1,133 @@
+/* LILY Guardian — floating panel injected by the content script */
+#lily-guardian-root {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+  width: 280px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #f4f4fb;
+  background: #15162b;
+  border: 1px solid #2a2c52;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+#lily-guardian-root .lg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2a1d63, #4630a8);
+}
+
+#lily-guardian-root .lg-toggle {
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+#lily-guardian-root .lg-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#lily-guardian-root.lg-collapsed .lg-body {
+  display: none;
+}
+
+#lily-guardian-root .lg-btn {
+  width: 100%;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid #3a3d6e;
+  background: #1f2142;
+  color: #f4f4fb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#lily-guardian-root .lg-btn:hover {
+  border-color: #7c5cff;
+}
+
+#lily-guardian-root .lg-btn.lg-primary {
+  background: #7c5cff;
+  border-color: #7c5cff;
+  color: #fff;
+}
+
+#lily-guardian-root .lg-btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+#lily-guardian-root .lg-result {
+  margin-top: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #0f1020;
+  border: 1px solid #2a2c52;
+  font-size: 12px;
+  line-height: 1.5;
+  max-height: 260px;
+  overflow: auto;
+}
+
+#lily-guardian-root .lg-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#lily-guardian-root .lg-badge.ok { background: #123524; color: #5ee0a0; }
+#lily-guardian-root .lg-badge.low { background: #3a3416; color: #ffd166; }
+#lily-guardian-root .lg-badge.medium { background: #4a2c12; color: #ff9f45; }
+#lily-guardian-root .lg-badge.high { background: #4a1620; color: #ff6b81; }
+
+#lily-guardian-root .lg-help { color: #a9abce; font-size: 11px; }
+#lily-guardian-root .lg-err { color: #ff8a9b; font-size: 12px; }
+#lily-guardian-root .lg-warn { color: #ffce6b; font-weight: 600; }
+#lily-guardian-root .lg-engine {
+  color: #7e80a8;
+  font-size: 10px;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid #2a2c52;
+}
+
+#lily-guardian-root .lg-finding {
+  border-left: 3px solid #7c5cff;
+  padding: 4px 8px;
+  margin-top: 6px;
+  background: #16183a;
+  border-radius: 4px;
+}
+
+#lily-guardian-root .lg-matches { color: #c8c9e6; font-size: 11px; }
+
+#lily-guardian-root .lg-meta {
+  font-size: 11px;
+  margin-top: 3px;
+  word-break: break-all;
+}
+
+#lily-guardian-root .lg-hash {
+  font-family: monospace;
+  color: #9ee6c0;
+}
