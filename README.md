@@ -12,4 +12,4 @@ Pronto! A extensão já está ativa e pronta para testes.
 
 **ATENÇÃO!**
 Utilizem sempre a versão mais atualizada do arquivo. 
-Atualmente a versão é: lily-guardian-extension-flat (2)
+Atualmente a versão é: lily-guardian-extension-flat (6)
